@@ -112,8 +112,18 @@ function showPromises() {
     document.getElementById("pictures").style.display = "none";
 }
 </script>
+<script>
+const gallery = document.getElementById("gallery");
+const totalPhotos = 93; // change this to how many photos you have
 
+for (let i = 1; i <= totalPhotos; i++) {
+    const img = document.createElement("img");
+    img.src = i + ".jpeg";
+    gallery.appendChild(img);
+}
+</script>
 </body>
 
 </html>
+
 
