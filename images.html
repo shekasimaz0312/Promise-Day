@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Memories 💖</title>
 
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffe6f0;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+}
+
+h1 {
+    color: #ff4b7d;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    color: white;
+    background: #ff4b7d;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Our Beautiful Memories 📸</h1>
+
+<div class="gallery" id="gallery"></div>
+
+<a href="index.html">← Back to Home</a>
+
+<script>
+const gallery = document.getElementById("gallery");
+const totalPhotos = 93;
+
+for (let i = 1; i <= totalPhotos; i++) {
+    const img = document.createElement("img");
+    img.src = i + ".jpeg";
+    gallery.appendChild(img);
+}
+</script>
+
+</body>
+</html>
